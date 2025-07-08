@@ -367,7 +367,15 @@ def task_22():
     return len(lst)
 
 def task_23():
-    raise NotImplementedError("task_23 not implemented")
+    from itertools import product
+    lst = [''.join(p) for p in product("0123456789AB", repeat=5)]
+    lst = [x for x in lst if x.count("7") == 1]
+
+    def count_9AB(lst):
+        return sum(1 for d in lst if d in "9AB")
+
+    lst = [x for x in lst if count_9AB(x) <= 3]
+    return len(lst)
 
 
 def task_24():
