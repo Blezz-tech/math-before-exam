@@ -379,8 +379,11 @@ def task_23():
 
 
 def task_24():
-    raise NotImplementedError("task_24 not implemented")
+    from itertools import product
+    lst = [''.join(p) for p in product("ИГОРЬ", repeat=5)]
+    lst = [x for x in lst if x[0] != 'Ь' and x.count("О") and x.count("Ь")]
 
+    return len(lst)
 
 def task_25():
     raise NotImplementedError("task_25 not implemented")
