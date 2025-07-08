@@ -334,16 +334,10 @@ def task_21():
 
 
 def task_22():
-    from itertools import permutations
+    from itertools import product
 
-    glas_and_sogl = []
-    for x1 in "ПРБЛ":
-        for x2 in "ПРБЛ":
-            glas_and_sogl.append(x1 + x2)
-
-    for x1 in "АО":
-        for x2 in "АО":
-            glas_and_sogl.append(x1 + x2)
+    glas_and_sogl = list(product("ПРБЛ", repeat=2)) + list(product("АО", repeat=2))
+    glas_and_sogl = [''.join(x) for x in glas_and_sogl]
 
     def check1(x):
         return all([
@@ -361,7 +355,7 @@ def task_22():
     def check3(x):
         return check1(x) and check2(x)
 
-    lst = [''.join(p) for p in permutations("ПАРАБОЛА")]
+    lst = [''.join(p) for p in product("ПРБОЛА", repeat=8)]
     lst = list(filter(check3, lst))
 
     return len(lst)
