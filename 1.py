@@ -225,7 +225,20 @@ def task_13():
 
 
 def task_14():
-    raise NotImplementedError("task_14 not implemented")
+    print("TODO 14 dont work")
+    def f(n):
+        n = str(n)
+        x1 = n[0] + n[1]
+        x2 = n[1] + n[2]
+        x3 = n[2] + n[3]
+        lst = sorted([x1, x2, x3])
+        lst = lst[1:]
+        return ''.join(lst)
+        
+    for i in range(9999, 999, -1):
+        r = f(i)
+        if r == '1315':
+            return i
 
 
 def task_15():
