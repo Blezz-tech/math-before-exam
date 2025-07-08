@@ -386,7 +386,11 @@ def task_24():
     return len(lst)
 
 def task_25():
-    raise NotImplementedError("task_25 not implemented")
+    from itertools import product
+    lst = [''.join(p) for p in product("СВЕТА", repeat=5)]
+    lst = [x for x in lst if x.count("С") > 0]
+
+    return len(lst)
 
 
 def task_26():
