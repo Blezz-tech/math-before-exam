@@ -211,7 +211,17 @@ def task_12():
 
 
 def task_13():
-    raise NotImplementedError("task_13 not implemented")
+
+    def f(n):
+        return n ^ ((1 << 8) - 1)
+        # s = bin(n)[2:].zfill(8)
+        # s = ''.join(['0' if x == '1' else '1' for x in s])
+        # return s
+    
+    for i in range(128, 256):
+        # print(bin(i)[2:], bin(f(i))[2:].zfill(8))
+        if i - f(i) == 105:
+            return i
 
 
 def task_14():
