@@ -394,7 +394,10 @@ def task_25():
 
 
 def task_26():
-    raise NotImplementedError("task_26 not implemented")
+    # (¬(x ∈ А) ∧ (x ∈ Q)) → (x ∈ P)
+    # (x ∈ А) or (x not ∈ Q) or (x ∈ P)
+    # (62;92]
+    return len(range(63, 92 + 1))
 
 
 def task_27():
