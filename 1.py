@@ -70,22 +70,46 @@ def task_5():
 
 
 def task_6():
+    # A  B  C  D  E  F
+    # 10 11 12 13 14 15
     for x in range(0, 10):
         x1 = x * 17 ** 3 +\
             11 * 17 ** 2 +\
-            0 * 17 ** 1 +\
-            9 * 17 ** 0
+             0 * 17 ** 1 +\
+             9 * 17 ** 0
+
         x2 = x * 15 ** 3 +\
-            8 * 15 ** 2 +\
+             8 * 15 ** 2 +\
             14 * 15 ** 1 +\
-            8 * 15 ** 0
+             8 * 15 ** 0
         r = x1 + x2
         if r % 155 == 0:
             return r // 155
 
 
 def task_7():
-    raise NotImplementedError("task_7 not implemented")
+    # A  B  C  D  E  F
+    # 10 11 12 13 14 15
+    # yAAx + x02y
+
+    lst = []
+
+    for x in range(0, 12):
+        for y in range(0, 12):
+            x1 = y * 12 ** 3 +\
+                10 * 12 ** 2 +\
+                10 * 12 ** 1 +\
+                 x * 12 ** 0
+
+            x2 = x * 14 ** 3 +\
+                 0 * 14 ** 2 +\
+                 2 * 14 ** 1 +\
+                 y * 14 ** 0
+            lst.append(x1 + x2)
+
+    lst = [r for r in lst if r % 80 == 0]
+    min_x = min(lst) / 80
+    return int(min_x)
 
 
 def task_8():
