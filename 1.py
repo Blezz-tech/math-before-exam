@@ -419,7 +419,18 @@ def task_27():
 
 
 def task_28():
-    raise NotImplementedError("task_28 not implemented")
+    # ((x < A) → (x^2 < 100)) ∧ ((y^2 ≤ 64) → (y ≤ A))
+    # )(x >= A) or (x^2 < 100)) and ((y^2 > 64) or (y <= A))
+
+    for A in range(0, 100):
+        lst = []
+        for x in range(0, 400):
+            for y in range(0, 400):
+                lst.append(
+                    ((x >= A) or (x^2 < 100)) and ((y^2 > 64) or (y <= A))
+                )
+        if all(lst):
+            return A
 
 
 def task_29():
