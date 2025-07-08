@@ -50,7 +50,13 @@ def task_3():
 
 
 def task_4():
-    raise NotImplementedError("task_4 not implemented")
+    from math import ceil
+
+    obj_id = ceil(105 * 11 / 8) # 2^11=2048 > 1510
+
+    mass = obj_id * 16384 / 1024
+
+    return int(mass)
 
 
 def task_5():
