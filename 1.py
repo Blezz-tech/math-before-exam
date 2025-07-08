@@ -399,11 +399,8 @@ def task_27():
     # x&21074 ≠ 0 → (x&12369 = 0 → x&A ≠ 0)
     # x&21074 != 0 → (x&12369 != 0 or x&A == 0)
     # (x&21074 == 0) or (x&12369 != 0) or (x&A == 0)
-    
-    print("27 dont work")
-    return None
 
-    for A in range(0, 500):
+    for A in range(0, 1000):
         lst = []
         for x in range(0, 700):
             lst.append(
