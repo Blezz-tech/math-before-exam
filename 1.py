@@ -38,7 +38,15 @@ def task_2():
 
 
 def task_3():
-    raise NotImplementedError("task_3 not implemented")
+    from math import ceil
+    # код сотрудника, код подразделения и некоторая дополнительная информация
+
+    sot_code = ceil(18 * 5 / 8) # 2^5=32 > 30
+    sot_pod = ceil(10 / 8) # 2^10=1024 > 1000
+    sot = 30
+    sot_dop = sot - sot_code - sot_pod
+
+    return int(sot_dop)
 
 
 def task_4():
