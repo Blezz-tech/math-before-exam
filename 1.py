@@ -60,7 +60,13 @@ def task_4():
 
 
 def task_5():
-    raise NotImplementedError("task_5 not implemented")
+    from math import ceil
+
+    password = ceil(16 * 3 / 8) # 2^3=8 > 7
+
+    mass = password * 30
+
+    return int(mass)
 
 
 def task_6():
