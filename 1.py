@@ -134,11 +134,52 @@ def task_8():
 
 
 def task_9():
-    raise NotImplementedError("task_9 not implemented")
+    # A  B  C  D  E  F
+    # 10 11 12 13 14 15
+    # yAAx + x02y
+
+    lst = []
+
+    for x in range(0, 9):
+        for y in range(0, 9):
+            x1 = 8 * 9 ** 4 +\
+                 8 * 9 ** 3 +\
+                 x * 9 ** 2 +\
+                 4 * 9 ** 1 +\
+                 y * 9 ** 0
+
+            x2 = 7 * 11 ** 3 +\
+                 x * 11 ** 3 +\
+                 4 * 11 ** 2 +\
+                 4 * 11 ** 1 +\
+                 y * 11 ** 0
+            lst.append(x1 + x2)
+
+    lst = [r for r in lst if r % 61 == 0]
+    return min(lst) // 61
 
 
 def task_10():
-    raise NotImplementedError("task_10 not implemented")
+    # A  B  C  D  E  F
+    # 10 11 12 13 14 15
+    # yAAx + x02y
+
+    lst = []
+
+    for x in range(0, 10):
+        x1 = 4 * 15 ** 3 +\
+            12 * 15 ** 2 +\
+             x * 15 ** 1 +\
+             4 * 15 ** 0
+
+        x2 = x * 13 ** 3 +\
+             6 * 13 ** 2 +\
+             2 * 13 ** 1 +\
+            10 * 13 ** 0
+        lst.append(x1 + x2)
+
+    lst = [r for r in lst if r % 121 == 0]
+    return min(lst) // 121
 
 
 def task_11():
