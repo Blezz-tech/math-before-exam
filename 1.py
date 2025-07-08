@@ -319,7 +319,7 @@ def task_21():
 
     count = 0
 
-    for x1 in "01234567":
+    for x1 in "1234567":
         for x2 in "01234567":
             for x3 in "01234567":
                 for x4 in "01234567":
