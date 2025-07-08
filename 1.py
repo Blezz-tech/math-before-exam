@@ -275,7 +275,13 @@ def task_17():
 
 
 def task_18():
-    raise NotImplementedError("task_18 not implemented")
+    def f(n):
+        if n == 1:
+            return 1
+        return n * f(n - 1)
+
+    # return f(5)
+    return 1*2*3*4*5
 
 
 def task_19():
