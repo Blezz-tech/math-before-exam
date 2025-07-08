@@ -197,7 +197,17 @@ def task_11():
 
 
 def task_12():
-    raise NotImplementedError("task_12 not implemented")
+    def f(n):
+        n = str(n)
+        x1 = str(int(n[0]) + int(n[1]))
+        x2 = str(int(n[1]) + int(n[2]))
+        return x1 + x2
+
+    count = 0
+    for i in range(100, 999 + 1):
+        if f(i) == "1715":
+            count += 1
+    return count
 
 
 def task_13():
