@@ -108,12 +108,29 @@ def task_7():
             lst.append(x1 + x2)
 
     lst = [r for r in lst if r % 80 == 0]
-    min_x = min(lst) / 80
-    return int(min_x)
+    return min(lst) // 80
 
 
 def task_8():
-    raise NotImplementedError("task_8 not implemented")
+    # A  B  C  D  E  F
+    # 10 11 12 13 14 15
+    # yAAx + x02y
+
+    lst = []
+
+    for x in range(0, 10):
+        x1 = 3 * 14 ** 3 +\
+             x * 14 ** 2 +\
+            13 * 14 ** 1 +\
+            10 * 14 ** 0
+
+        x2 = 5 * 12 ** 3 +\
+             x * 12 ** 2 +\
+            10 * 12 ** 1 +\
+             6 * 12 ** 0
+        r = x1 + x2
+        if r % 81 == 0:
+            return r // 81
 
 
 def task_9():
