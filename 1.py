@@ -7,4 +7,10 @@ k = 3
 # 3 бита на символ
 # 2^3 = 8
 
+from math import ceil
 
+password = ceil(11 * 3 / 8) # округляем вверх
+
+count = 20
+
+print(password * count)
