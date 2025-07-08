@@ -334,8 +334,37 @@ def task_21():
 
 
 def task_22():
-    raise NotImplementedError("task_22 not implemented")
+    from itertools import permutations
 
+    glas_and_sogl = []
+    for x1 in "ПРБЛ":
+        for x2 in "ПРБЛ":
+            glas_and_sogl.append(x1 + x2)
+
+    for x1 in "АО":
+        for x2 in "АО":
+            glas_and_sogl.append(x1 + x2)
+
+    def check1(x):
+        return all([
+            x.count("П") == 1,
+            x.count("А") == 3,
+            x.count("Р") == 1,
+            x.count("Б") == 1,
+            x.count("О") == 1,
+            x.count("Л") == 1,
+        ])
+
+    def check2(x):
+        return all(map(lambda t: t not in x, glas_and_sogl))
+
+    def check3(x):
+        return check1(x) and check2(x)
+
+    lst = [''.join(p) for p in permutations("ПАРАБОЛА")]
+    lst = list(filter(check3, lst))
+
+    return len(lst)
 
 def task_23():
     raise NotImplementedError("task_23 not implemented")
