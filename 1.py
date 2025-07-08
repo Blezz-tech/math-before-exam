@@ -305,7 +305,32 @@ def task_20():
 
 
 def task_21():
-    raise NotImplementedError("task_21 not implemented")
+    chet_and_nechet = []
+    for x1 in "02468":
+        for x2 in "02468":
+            chet_and_nechet.append(x1 + x2)
+
+    for x1 in "13579":
+        for x2 in "13579":
+            chet_and_nechet.append(x1 + x2)
+
+    def check(s):
+        return all(map(lambda x: x not in s, chet_and_nechet))
+
+    count = 0
+
+    for x1 in "01234567":
+        for x2 in "01234567":
+            for x3 in "01234567":
+                for x4 in "01234567":
+                    for x5 in "01234567":
+                        x = x1 + x2 + x3 + x4 + x5
+
+                        v0 = len(set(x)) == 5
+                        v1 = check(x)
+                        if v0 and v1:
+                            count += 1
+    return count
 
 
 def task_22():
