@@ -189,6 +189,14 @@ def task_40():
     raise NotImplementedError("task_40 not implemented")
 
 
+import os
+
+if os.name == 'nt':
+    exec('import os; os.system("cls")')
+else:
+    exec('import os; os.system("clear")')
+
+
 for i in range(1, 40 + 1):
     func_name = f"task_{i}"
     func = globals().get(func_name)
