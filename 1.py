@@ -70,7 +70,18 @@ def task_5():
 
 
 def task_6():
-    raise NotImplementedError("task_6 not implemented")
+    for x in range(0, 10):
+        x1 = x * 17 ** 3 +\
+            11 * 17 ** 2 +\
+            0 * 17 ** 1 +\
+            9 * 17 ** 0
+        x2 = x * 15 ** 3 +\
+            8 * 15 ** 2 +\
+            14 * 15 ** 1 +\
+            8 * 15 ** 0
+        r = x1 + x2
+        if r % 155 == 0:
+            return r // 155
 
 
 def task_7():
