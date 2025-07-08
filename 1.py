@@ -225,12 +225,11 @@ def task_13():
 
 
 def task_14():
-    print("TODO 14 dont work")
     def f(n):
         n = str(n)
-        x1 = n[0] + n[1]
-        x2 = n[1] + n[2]
-        x3 = n[2] + n[3]
+        x1 = str(int(n[0]) + int(n[1]))
+        x2 = str(int(n[1]) + int(n[2]))
+        x3 = str(int(n[2]) + int(n[3]))
         lst = sorted([x1, x2, x3])
         lst = lst[1:]
         return ''.join(lst)
@@ -242,7 +241,17 @@ def task_14():
 
 
 def task_15():
-    raise NotImplementedError("task_15 not implemented")
+    def f(n):
+        n = str(n)
+        x1 = str(int(n[0]) + int(n[1]))
+        x2 = str(int(n[2]) + int(n[3]))
+        lst = sorted([x1, x2])[::-1]
+        return ''.join(lst)
+        
+    for i in range(1000, 9999 + 1):
+        r = f(i)
+        if r == '1311':
+            return i
 
 
 def task_16():
