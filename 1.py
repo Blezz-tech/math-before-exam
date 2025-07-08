@@ -183,7 +183,17 @@ def task_10():
 
 
 def task_11():
-    raise NotImplementedError("task_11 not implemented")
+    def f(n):
+        s = bin(n)[2:]
+        s = s + str(s.count("1") % 2)
+        s = s + str(s.count("1") % 2)
+        return int(s, 2)        
+
+    for i in range(200):
+        r = f(i)
+        if r > 93:
+            return r
+            break
 
 
 def task_12():
