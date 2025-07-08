@@ -255,7 +255,15 @@ def task_15():
 
 
 def task_16():
-    raise NotImplementedError("task_16 not implemented")
+    def f(n):
+        if n < 3:
+            return 1
+        if n > 2 and n % 2 == 1:
+            return f(n - 1) + 3 * f(n - 2)
+        if n > 2 and n % 2 == 0:
+            return sum([f(i) for i in range(1, n)])
+
+    # return f(28)
 
 
 def task_17():
