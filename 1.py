@@ -297,7 +297,11 @@ def task_19():
 
 
 def task_20():
-    raise NotImplementedError("task_20 not implemented")
+    # F(2022) / F(2024)
+    # 2022 * F(2023) / F(2024)
+    # 2022 * 2023 * F(2024) / F(2024)
+    # 2022 * 2023
+    return 2022 * 2023
 
 
 def task_21():
