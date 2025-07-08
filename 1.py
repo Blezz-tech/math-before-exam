@@ -434,7 +434,12 @@ def task_28():
 
 
 def task_29():
-    raise NotImplementedError("task_29 not implemented")
+    def f(x, A):
+        return (x % A == 0) <= ((x % 21 == 0) + (x % 35 == 0))
+
+    for A in range(1, 300):
+        if all([f(x, A) for x in range(1, 300)]):
+            return A
 
 
 def task_30():
