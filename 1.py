@@ -363,6 +363,7 @@ def task_22():
 def task_23():
     from itertools import product
     lst = [''.join(p) for p in product("0123456789AB", repeat=5)]
+    lst = [x for x in lst if x[0] != '0']
     lst = [x for x in lst if x.count("7") == 1]
 
     def count_9AB(lst):
