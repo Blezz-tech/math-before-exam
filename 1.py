@@ -17,7 +17,24 @@ def task_1():
 
 
 def task_2():
-    raise NotImplementedError("task_2 not implemented")
+    # идентификатор объекта, описание структуры объекта и дополнительную информацию
+    from math import ceil
+
+    obj_id = ceil(7 * 5 / 8)
+    # 22 буквы
+    # для этого нужно 5 бит
+    # 2^5=32
+    # округляем в большую сторону
+
+    obj_structure = ceil(70 * 11 / 8)
+    # 1789
+    # для этого нужно 11 бит
+    # 2^11 = 2048
+    # округляем в большую сторону
+
+    obj = 2 * 1024 * 1024 / 16384
+
+    return int(obj - obj_id - obj_structure)
 
 
 def task_3():
