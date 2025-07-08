@@ -267,7 +267,11 @@ def task_16():
 
 
 def task_17():
-    raise NotImplementedError("task_17 not implemented")
+    # f(2024) - f(2022)
+    # 2024 - 1 + f(2023) - f(2022)
+    # 2024 - 1 + 2023 - 1 + f(2022) - f(2022)
+    # 2024 - 1 + 2023 - 1
+    return 2024 - 1 + 2023 - 1
 
 
 def task_18():
