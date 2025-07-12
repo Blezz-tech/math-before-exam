@@ -1,5 +1,13 @@
 \documentclass[a4paper,12pt]{article}
 
+\usepackage[
+    paper=a4paper,
+    left=1cm,
+    right=1cm,
+    top=1cm, 
+    bottom=1cm
+]{geometry}
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{unicode-math}
@@ -17,7 +25,10 @@
 \usepackage{fontspec}
 \setmainfont{Noto Serif} % основной текст — русский
 \newfontfamily\englishfont{Latin Modern Roman} % английский
-\setmathfont{Latin Modern Math} % математика
+
+\setmathfont{STIX Two Math} % математика
+% \setmathfont[range=\varnothing]{Asana Math}
+% \setmathfont[range=\int]{Latin Modern Math}
 
 % Добавляем необходимые пакеты и параметры
 \pgfplotsset{compat=1.18}
@@ -108,7 +119,43 @@ x^2 - ax + a - 1 = 0
 \section{Задача 124}
 
 При каких значениях параметра корни уравнения
-$(a - 1)x^2 - (2a - 1)x + a + 5 = 0$ отрицательны?
+\[
+(a - 1)x^2 - (2a - 1)x + a + 5 = 0
+\]
+отрицательны?
+
+Известно, что для корней $x_1$ и $x_2$ и дискриминанта справедливо:
+\begin{align*}
+    x_1 + x_2 &= \frac{2a - 1}{a - 1}, \\
+    x_1 x_2 &= \frac{a + 5}{a - 1} \\
+    D &= 4a^2 - 4a + 1 - 4a + 4 \\
+      &= 4a^2 - 8a + 5.
+\end{align*}
+
+Начальные условия:
+\[
+\begin{cases}
+    x_1 + x_2 < 0, & \\
+    x_1 x_2 > 0,   & \\
+    D > 0.         &
+\end{cases}
+\implies
+\begin{cases}
+    \dfrac{2a - 1}{a - 1} < 0, \\[6pt]
+    \dfrac{a + 5}{a - 1} > 0, \\[6pt]
+    4a^2 - 8a + 5 > 0.
+\end{cases}
+\implies
+\begin{cases}
+    a \in (\dfrac{1}{2}; 1), \\
+    a \in (-\infty; -5) \cup (1; +\infty), \\
+    4(a - 1)^2 + 1 > 0 \implies a \in (-\infty; +\infty).
+\end{cases}
+\]
+
+\bigskip
+
+\textbf{Ответ:} $\varnothing$
 
 \section{Задача 125}
 
