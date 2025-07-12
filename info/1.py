@@ -604,7 +604,33 @@ def task_39():
 
 
 def task_40():
-    raise NotImplementedError("task_40 not implemented")
+
+    lst = [
+        1
+        for x1 in range(2)
+        for x2 in range(2)
+        for x3 in range(2)
+        for x4 in range(2)
+        for x5 in range(2)
+        for x6 in range(2)
+        for x7 in range(2)
+        for y1 in range(2)
+        for y2 in range(2)
+        for y3 in range(2)
+        for y4 in range(2)
+        for y5 in range(2)
+        for y6 in range(2)
+        for y7 in range(2)
+        if (y1 <= (y2 and x1)) and (x1 <= x2)
+        if (y2 <= (y3 and x2)) and (x2 <= x3)
+        if (y3 <= (y4 and x3)) and (x3 <= x4)
+        if (y4 <= (y5 and x4)) and (x4 <= x5)
+        if (y5 <= (y6 and x5)) and (x5 <= x6)
+        if (y6 <= (y7 and x6)) and (x6 <= x7)
+        if y7 <= x7
+    ]
+
+    return len(lst)
 
 
 import os
