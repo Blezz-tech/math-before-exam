@@ -34,39 +34,43 @@
 
 \section{Задача 122}
 
-При каких значениях параметра корни уравнения $x^2 - 3ax + a^2 = 0$ таковы,
-что сумма их квадратов равна $\frac{7}{4}$.
+При каких значениях параметра $a$ корни уравнения
+\[
+x^2 - 3ax + a^2 = 0
+\]
+таковы, что сумма их квадратов равна $\frac{7}{4}$?
 
-\begin{equation}
-    x_1 + x_2 = 3a
-\end{equation}
+Известно, что для корней $x_1$ и $x_2$ справедливо:
+\begin{align*}
+    x_1 + x_2 &= 3a, \\
+    x_1 x_2 &= a^2.
+\end{align*}
 
-\begin{equation}
-    x_1 \cdot x_2 = a^2
-\end{equation}
+Вычислим сумму квадратов корней:
+\begin{align*}
+    x_1^2 + x_2^2 &= (x_1 + x_2)^2 - 2 x_1 x_2 \\
+    &= (3a)^2 - 2a^2 \\
+    &= 9a^2 - 2a^2 = 7a^2.
+\end{align*}
 
-\begin{equation}
-    \frac{7}{4} =
-    x_1^2 + x_2^2 =
-    (x_1 + x^2)^2 - 2x_1x_2 =
-    (3a)^2 - 2a^2 =
-    9a^2 - 2a^2 =
-    7a^2
-\end{equation}
+По условию:
+\[
+x_1^2 + x_2^2 = \frac{7}{4}.
+\]
 
-\begin{equation}
-    7a^2 = \frac{7}{5}
-\end{equation}
+Подставим выражение через $a$:
+\[
+7a^2 = \frac{7}{4} \implies a^2 = \frac{1}{4}.
+\]
 
-\begin{equation}
-    a^2 = \frac{1}{4}
-\end{equation}
+Отсюда
+\[
+a = \pm \frac{1}{2}.
+\]
 
-\begin{equation}
-    a = \pm \frac{1}{2}
-\end{equation}
+\bigskip
 
-Ответ: $\pm\frac{1}{2}$
+\textbf{Ответ:} \(\boxed{\pm \frac{1}{2}}\)
 
 \section{Задача 123}
 
