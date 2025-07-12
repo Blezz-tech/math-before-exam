@@ -201,7 +201,7 @@ def task_12():
         n = str(n)
         x1 = str(int(n[0]) + int(n[1]))
         x2 = str(int(n[1]) + int(n[2]))
-        return x1 + x2
+        return "".join(sorted([x1 , x2])[::-1])
 
     count = 0
     for i in range(100, 999 + 1):
