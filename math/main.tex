@@ -1,0 +1,40 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\usepackage[inline]{enumitem}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+
+% Polyglossia для языков
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+
+% Fontspec и настройка шрифтов для языков и математики
+\usepackage{fontspec}
+\setmainfont{Noto Serif} % основной текст — русский
+\newfontfamily\englishfont{Latin Modern Roman} % английский
+\setmathfont{Latin Modern Math} % математика
+
+% Добавляем необходимые пакеты и параметры
+\pgfplotsset{compat=1.18}
+% \tdplotsetmaincoords{70}{110} % угол обзора
+% \usetikzlibrary{angles,quotes} % <- вот это обязательно!
+
+
+% create command \asbuk for lists
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@asbuk@alph}{щ} % section 8.1
+\makeatother
+
+\begin{document}
+
+Это пример простого документа, скомпилированного с помощью LuaLaTeX.  
+LuaLaTeX позволяет использовать современные шрифты и писать на русском языке без дополнительных настроек.
+
+LuaLaTeX --- это мощный инструмент для создания документов с расширенными возможностями.
+
+\end{document}
