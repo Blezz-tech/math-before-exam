@@ -501,11 +501,54 @@ def task_35():
 
 
 def task_36():
-    raise NotImplementedError("task_36 not implemented")
+    lst = [
+        1
+        for x1 in range(2)
+        for x2 in range(2)
+        for x3 in range(2)
+        for x4 in range(2)
+        for x5 in range(2)
+        for y1 in range(2)
+        for y2 in range(2)
+        for y3 in range(2)
+        for y4 in range(2)
+        for y5 in range(2)
+        if (x1 <= x2) and (x2 <= x3) and (x3 <= x4) and (x4 <= x5)
+        if (y1 <= y2) and (y2 <= y3) and (y3 <= y4) and (y4 <= y5)
+        if y5 <= x5
+    ]
+
+    return len(lst)
 
 
 def task_37():
-    raise NotImplementedError("task_37 not implemented")
+    # ((x1 ≡ x2) ∧ (x3 ≡ x4)) ∨ (¬(x1 ≡ x2) ∧ ¬(x3 ≡ x4)) = 0
+    # A = (x1 ≡ x2) ; B = (x3 ≡ x4)
+    # (A ∧ B) ∨ (¬A ∧ ¬B) = 0
+    # A ≡ B = 0
+    # ¬(A ≡ B)
+    # ¬((x1 ≡ x2) ≡ (x3 ≡ x4))
+
+
+    lst = [
+        1
+        for x1 in range(2)
+        for x2 in range(2)
+        for x3 in range(2)
+        for x4 in range(2)
+        for x5 in range(2)
+        for x6 in range(2)
+        for x7 in range(2)
+        for x8 in range(2)
+        for x9 in range(2)
+        for x10 in range(2)
+        if not ((x1 == x2) == (x3 == x4))
+        if not ((x3 == x4) == (x5 == x6))
+        if not ((x5 == x6) == (x7 == x8))
+        if not ((x7 == x8) == (x9 == x10))
+    ]
+
+    return len(lst)
 
 
 def task_38():
@@ -528,7 +571,7 @@ else:
     exec('import os; os.system("clear")')
 
 
-for i in range(1, 40 + 1):
+for i in range(30, 40 + 1):
     func_name = f"task_{i}"
     func = globals().get(func_name)
     if func:
