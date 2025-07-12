@@ -489,7 +489,15 @@ def task_34():
 
 
 def task_35():
-    raise NotImplementedError("task_35 not implemented")
+    def f(x, y):
+        if x == y:
+            return 1
+        elif x < y or x == 12:
+            return 0
+        else:
+            return f(x - 3, y) + f(x // 2 if x % 2 == 0 else x - 5, y)
+ 
+    return f(36, 3)
 
 
 def task_36():
