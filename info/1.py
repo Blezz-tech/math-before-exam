@@ -552,7 +552,29 @@ def task_37():
 
 
 def task_38():
-    raise NotImplementedError("task_38 not implemented")
+    # ¬(x1 ≡ x2) ∧ ( (x1 ∧ ¬x3) ∨ (¬x1 ∧ x3) ) = 0
+    # ¬(x1 ≡ x2) ∧ ¬(x1 ≡ x3) = 0
+    # ¬((x1 ≡ x2) ∨ (x1 ≡ x3)) = 0
+
+    lst = [
+        1
+        for x1 in range(2)
+        for x2 in range(2)
+        for x3 in range(2)
+        for x4 in range(2)
+        for x5 in range(2)
+        for x6 in range(2)
+        for x7 in range(2)
+        for x8 in range(2)
+        if not ((x1 == x2) or (x1 == x3)) == 0
+        if not ((x2 == x3) or (x2 == x4)) == 0
+        if not ((x3 == x4) or (x3 == x5)) == 0
+        if not ((x4 == x5) or (x4 == x6)) == 0
+        if not ((x5 == x6) or (x5 == x7)) == 0
+        if not ((x6 == x7) or (x6 == x8)) == 0
+    ]
+
+    return len(lst)
 
 
 def task_39():
