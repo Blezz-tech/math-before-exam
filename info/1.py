@@ -641,7 +641,7 @@ else:
     exec('import os; os.system("clear")')
 
 
-for i in range(30, 40 + 1):
+for i in range(1, 40 + 1):
     func_name = f"task_{i}"
     func = globals().get(func_name)
     if func:
