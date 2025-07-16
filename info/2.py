@@ -110,7 +110,7 @@ def task_7():
 
 def task_8():
     def f(x, y):
-        if x > y and x != 13:
+        if x > y or x == 13:
             return 0
         elif x == y:
             return 1
