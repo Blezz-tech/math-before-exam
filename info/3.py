@@ -50,7 +50,13 @@ def task_3():
 
 
 def task_4():
-    raise NotImplementedError("task_4 not implemented")
+    def f(n):
+        if n == 1:
+            return 1
+        if n >= 2:
+            return f(n - 1) * n
+        
+    return f(6)
 
 
 def task_5():
