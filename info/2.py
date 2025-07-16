@@ -141,8 +141,40 @@ def task_9():
 
 
 def task_10():
-    raise NotImplementedError("task_10 not implemented")   
+    # (x1 → (x2 ∧ y2)) ∧ (y1 → y2) == 1
+    # (not x1 or (x1 and y2)) and (not y1 or y2) == 1
 
+    lst = [
+        1
+        for x1 in range(2)
+        for x2 in range(2)
+        for x3 in range(2)
+        for x4 in range(2)
+        for x5 in range(2)
+        for x6 in range(2)
+        for x7 in range(2)
+        for x8 in range(2)
+        for x9 in range(2)
+        for y1 in range(2)
+        for y2 in range(2)
+        for y3 in range(2)
+        for y4 in range(2)
+        for y5 in range(2)
+        for y6 in range(2)
+        for y7 in range(2)
+        for y8 in range(2)
+        for y9 in range(2)
+        if (x1 <= (x2 and y2)) and (y1 <= y2)
+        if (x2 <= (x3 and y3)) and (y2 <= y3)
+        if (x3 <= (x4 and y4)) and (y3 <= y4)
+        if (x4 <= (x5 and y5)) and (y4 <= y5)
+        if (x5 <= (x6 and y6)) and (y5 <= y6)
+        if (x6 <= (x7 and y7)) and (y6 <= y7)
+        if (x7 <= (x8 and y8)) and (y7 <= y8)
+        if (x8 <= (x9 and y9)) and (y8 <= y9)
+    ]
+
+    return len(lst)
 
 import os
 
