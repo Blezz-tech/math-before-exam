@@ -60,7 +60,30 @@ def task_4():
 
 
 def task_5():
-    raise NotImplementedError("task_5 not implemented")
+    def convert(x):
+        s = ''
+
+        while x:
+            s += str(x % 9)
+            x //= 9
+        return s[::-1]
+
+    count = 0
+    for i in range(0, 1_000_000):
+        r = convert(i)
+
+        v0 = r.count('4') == 1
+        v1 = (r.count('1') +\
+            r.count('3') +\
+            r.count('5') +\
+            r.count('7') +\
+            r.count('9')) == 2
+        v2 = len(r) == 6
+
+        if v0 and v1 and v2:
+            count += 1
+
+    return count
 
 
 def task_6():
