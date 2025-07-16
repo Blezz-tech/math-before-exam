@@ -38,7 +38,20 @@ def task_2():
 
 
 def task_3():
-    raise NotImplementedError("task_3 not implemented")    
+    def f(x):
+        s = bin(x)[2:]
+
+        if s.count("1") > s.count("0"):
+            s = s + '1'
+        else:
+            s = s + '0'
+
+        return int(s, 2)
+
+    for i in range(300):
+        r = f(i)
+        if r > 80:
+            return r
 
 
 def task_4():
