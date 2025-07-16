@@ -33,7 +33,20 @@ def task_2():
 
 
 def task_3():
-    raise NotImplementedError("task_3 not implemented")
+    def f(x):
+        x = str(x)
+        x1 = int(x[0]) + int(x[1])
+        x2 = int(x[1]) + int(x[2])
+        x3 = int(x[2]) + int(x[3])
+
+        lst = sorted([x1, x2, x3])
+
+        return int(str(lst[1]) + str(lst[2]))
+
+    for i in range(1000, 9999 + 1):
+        r = f(i)
+        if r == 1418:
+            return i
 
 
 def task_4():
