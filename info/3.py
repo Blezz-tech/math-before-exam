@@ -87,7 +87,19 @@ def task_5():
 
 
 def task_6():
-    raise NotImplementedError("task_6 not implemented")
+    def convert(x):
+        s = ''
+
+        while x:
+            s += str(x % 5)
+            x //= 5
+        return s[::-1]
+
+    for A in range(10000):
+        r = (125**52 + 25 ** 46 - A)
+
+        if convert(r).count('4') == 86:
+            return A
 
 
 def task_7():
