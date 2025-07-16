@@ -109,7 +109,15 @@ def task_7():
 
 
 def task_8():
-    raise NotImplementedError("task_8 not implemented")    
+    def f(x, y):
+        if x > y and x != 13:
+            return 0
+        elif x == y:
+            return 1
+        else:
+            return f(x + 1, y) + f(x + 2, y) + f(x * 3, y)
+
+    return f(3, 8) * f(8, 18)
 
 
 def task_9():
