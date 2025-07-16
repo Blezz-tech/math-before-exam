@@ -121,7 +121,21 @@ def task_8():
 
 
 def task_9():
-    raise NotImplementedError("task_9 not implemented")    
+    max_sum_of_digit = 0
+    max_number = 0
+    for x1 in range(1000, 3162):
+        # 2 3
+        # 7 8
+        if str(x1)[-1] not in '27':
+            continue
+        x2 = x1 + 1
+        r = x1 * x2
+        r_sum_of_digit = sum([int(x) for x in str(r)])
+        if r_sum_of_digit >= max_sum_of_digit:
+            max_number = r
+            max_sum_of_digit = r_sum_of_digit
+    
+    return max_number
 
 
 def task_10():
