@@ -79,7 +79,23 @@ def task_5():
 
 
 def task_6():
-    raise NotImplementedError("task_6 not implemented")    
+    def convert(x):
+        s = ''
+
+        while x:
+            s = s + str(x % 9)
+            x //= 9
+        
+        return s[::-1]
+
+    lst = []
+    for A in range(9):
+        x = convert(729 ** 105 - 3 ** 56 + A)
+
+        if str(x).count("8") == 290:
+            lst.append(A)
+
+    return lst
 
 
 def task_7():
