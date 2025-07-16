@@ -411,6 +411,7 @@ def task_27():
 
 
 def task_28():
+    count = 0
     for A in range(0, 100):
         lst = []
         for x in range(0, 400):
@@ -419,7 +420,8 @@ def task_28():
                     ((x < A) <= (x**2 < 100)) and ((y**2 <= 64) <= (y <= A))
                 )
         if all(lst):
-            return A
+            count += 1
+    return count
 
 
 def task_29():
