@@ -1,6 +1,13 @@
 
 def task_1():
-    raise NotImplementedError("task_1 not implemented")    
+    from math import ceil
+    x = 113
+    k = 11 # 2048 > 2025
+
+    t = x * k / 8
+    t = ceil(t)
+
+    return t * 32768 / 1024
 
 
 def task_2():
