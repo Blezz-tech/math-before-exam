@@ -34,7 +34,7 @@ def task_2():
         
         r = x1 + x2 - x3
         if r % 46 == 0:
-            return x
+            return r
 
 
 def task_3():
