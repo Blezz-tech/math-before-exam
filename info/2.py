@@ -64,7 +64,18 @@ def task_4():
 
 
 def task_5():
-    raise NotImplementedError("task_5 not implemented")    
+    from itertools import product
+
+    count = 0
+    for s in product("ТИМОФЕЙ", repeat=5):
+        s = "".join(list(s))
+        v0 = s.count("Й") <= 1 and s[0] != 'Й' and s[-1] != 'Й'
+        v1 = ("ЙИ" not in s) and ("ИЙ" not in s)
+
+        if v0 and v1:
+            count += 1
+    
+    return count
 
 
 def task_6():
