@@ -11,7 +11,25 @@ def task_1():
 
 
 def task_2():
-    raise NotImplementedError("task_2 not implemented")
+    for x in range(19):
+        x1 = 9 * 19 ** 7 +\
+            8 * 19 ** 6 +\
+            8 * 19 ** 5 +\
+            9 * 19 ** 4 +\
+            7 * 19 ** 3 +\
+            x * 19 ** 2 +\
+            2 * 19 ** 1 +\
+            1 * 19 ** 0
+
+        x2 = 2 * 19 ** 4 +\
+            x * 19 ** 3 +\
+            9 * 19 ** 2 +\
+            2 * 19 ** 1 +\
+            3 * 19 ** 0
+
+        r = x1 + x2
+        if r % 18 == 0:
+            return r // 18
 
 
 def task_3():
