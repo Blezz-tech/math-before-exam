@@ -99,7 +99,13 @@ def task_6():
 
 
 def task_7():
-    raise NotImplementedError("task_7 not implemented")    
+    for A in range(0, 300):
+        if all([
+            (2*x + 3*y < A) or (x >= y) or (y > 24)
+            for x in range(0, 100)
+            for y in range(0, 100)
+        ]):
+            return A
 
 
 def task_8():
