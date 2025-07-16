@@ -89,13 +89,13 @@ def task_6():
         return s[::-1]
 
     lst = []
-    for A in range(9):
+    for A in range(1000):
         x = convert(729 ** 105 - 3 ** 56 + A)
 
         if str(x).count("8") == 290:
             lst.append(A)
 
-    return lst
+    return min(lst)
 
 
 def task_7():
