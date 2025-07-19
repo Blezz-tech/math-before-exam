@@ -147,7 +147,20 @@ def task_9():
 
 
 def task_10():
-    raise NotImplementedError("task_10 not implemented")
+    return len([
+        1
+        for x1 in range(2)
+        for x2 in range(2)
+        for x3 in range(2)
+        for x4 in range(2)
+        for x5 in range(2)
+        for x6 in range(2)
+        for x7 in range(2)
+        for x8 in range(2)
+        if (x1 or x2) <= (x3 == x4)
+        if (x3 or x4) <= (x5 == x6)
+        if (x5 or x6) <= (x7 == x8)
+    ])
 
 
 import os
