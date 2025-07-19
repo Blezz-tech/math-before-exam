@@ -1,10 +1,15 @@
 
-def task_0():
-    raise NotImplementedError("task_0 not implemented")
-
-
 def task_1():
-    raise NotImplementedError("task_1 not implemented")
+    # личный код, номер и дополнительная информация
+
+    from math import ceil
+
+    code = ceil(15 * 5 / 8) # 32 > 20 + 9
+    nom = ceil(7 / 8) # 128 > 80
+
+    dop = 20 - code - nom
+
+    return dop
 
 
 def task_2():
