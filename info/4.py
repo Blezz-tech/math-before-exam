@@ -33,7 +33,15 @@ def task_2():
 
 
 def task_3():
-    raise NotImplementedError("task_3 not implemented")
+    def f(n):
+        s = bin(n)[2:]
+        s = ''.join(['0' if x == '1' else '1' for x in s])
+        return n - int(s, 2)
+    
+    for i in range(1, 3000):
+        r = f(i)
+        if r == 979:
+            return i
 
 
 def task_4():
