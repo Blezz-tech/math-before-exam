@@ -74,19 +74,45 @@ def task_5():
             count += 1
     # return count
     # НЕВЕРНО
+    raise NotImplementedError("task_5 not implemented")
     
 
 def task_6():
-    raise NotImplementedError("task_6 not implemented")
+    for A in range(1200):
+        x = bin(4**511 + 2**511 - A)[2:]
+        if str(x).count("1") == 503:
+            return A
 
 
 def task_7():
-    raise NotImplementedError("task_7 not implemented")
+    def f(x, A):
+        return (70 % A == 0) and ((x % 28 != 0) or (x % A == 0) or (x % 21 != 0))
+
+
+    for A in range(100, 1, -1):
+        if all([f(x, A) for x in range(1, 600)]):
+            return A
 
 
 def task_8():
-    raise NotImplementedError("task_8 not implemented")
+    def f(x, y, prev_com=""):
+        if x == y:
+            return 1
+        if x > y:
+            return 0
+        if x < y:
+            match prev_com:
+                case "+":
+                    return f(x * 2, y, "*") + f(x * 3, y, "*")
+                case "*":
+                    return f(x + 1, y, "+") + f(x + 2, y, "+")
+                case "":
+                    return f(x + 1, y, "+") +\
+                        f(x + 2, y, "+") +\
+                        f(x * 2, y, "*") +\
+                        f(x * 3, y, "*")
 
+    return f(1, 22)
 
 def task_9():
     raise NotImplementedError("task_9 not implemented")
