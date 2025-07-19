@@ -13,7 +13,23 @@ def task_1():
 
 
 def task_2():
-    raise NotImplementedError("task_2 not implemented")
+    for x in range(10):
+        #  A  B  C  D  E  F
+        # 10 11 12 13 14 15
+
+        x1 = x * 13 ** 3 +\
+            10 * 13 ** 2 +\
+             0 * 13 ** 1 +\
+             4 * 13 ** 0
+
+        x2 = 1 * 18 ** 3 +\
+            13 * 18 ** 2 +\
+             x * 18 ** 1 +\
+             3 * 18 ** 0
+        
+        r = x1 + x2
+        if r % 184 == 0:
+            return r // 184
 
 
 def task_3():
