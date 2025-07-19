@@ -55,8 +55,26 @@ def task_4():
 
 
 def task_5():
-    raise NotImplementedError("task_5 not implemented")
+    from itertools import product
 
+    count = 0
+    for x in product("РУСЛАН", repeat=6):
+        v0 = ("УА" not in x) and\
+             ("АУ" not in x) and\
+             ("АА" not in x) and\
+             ("УУ" not in x)
+
+        v1 = (x.count("Р") == 1) and\
+             (x.count("У") == 1) and\
+             (x.count("С") == 1) and\
+             (x.count("Л") == 1) and\
+             (x.count("А") == 1) and\
+             (x.count("Н") == 1)
+        if v0 and v1:
+            count += 1
+    # return count
+    # НЕВЕРНО
+    
 
 def task_6():
     raise NotImplementedError("task_6 not implemented")
