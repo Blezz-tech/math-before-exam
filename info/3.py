@@ -103,7 +103,12 @@ def task_6():
 
 
 def task_7():
-    raise NotImplementedError("task_7 not implemented")
+    for A in range(300, 1, -1):
+        if all([
+            (x&A != 0) <=( (x&10 == 0) <= (x&3 != 0))
+            for x in range(300)
+        ]):
+            return A
 
 
 def task_8():
