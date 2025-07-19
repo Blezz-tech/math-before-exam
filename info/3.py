@@ -124,7 +124,26 @@ def task_8():
 
 
 def task_9():
-    raise NotImplementedError("task_9 not implemented")
+    # 1 2
+    # 3 4
+    # 6 7
+    # 8 9
+    x_max = 0
+    x_sum = 0
+
+    for x in range(10000, 31623):
+        x1 = x + 1
+
+        if str(x)[-1] not in "1368":
+            continue
+
+        r = x * x1
+        r_sum = sum([int(t) for t in str(r)])
+        if r_sum >= x_sum:
+            x_sum = r_sum
+            x_max = r
+        
+    return x_max
 
 
 def task_10():
